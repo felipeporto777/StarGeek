@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="fundo">
+    <div class="geral">
+        <header class="cabecalho">
+            <nav class="menu">
+                <img src="img/Group 9(preto).png" alt="" class="img-cabecalho">
+                <a href="#" class="botao-cabecalho"><b>Filmes</b></a>
+                <a href="#" class="botao-cabecalho"><b>Séries</b></a>
+                <a href="#" class="botao-cabecalho"><b>Animes</b></a>
+                <a href="#" class="botao-cabecalho"><b>Artistas</b></a>
+                <a href="#" class="botao-cabecalho"><b>Futebol</b></a>
+            </nav>
+            <div class="cabecalho2">
+                <a href="#" class="botao-encontre-uma-loja"><img src="img/location.svg" alt=""><b> Mais filmes </b></a>
+                <a href="cadastrodemidia.html" class="botao-entrar"><b>Cadastro de mídia</b></a>
+                <a href="index1.html" class="botao-participe-agora"><b>Sair</b></a>
+            </div>
+        </header>
+        <div class="ddt">
+            <div class="filmesContainer">
+
+                <div class="img-filmes">
+                    <img src="img/dragao.png" class="img-sabor">
+                    <p class="p-filmes">Como treinar seu dragão</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/gato de botas.png" class="img-sabor">
+                    <p class="p-filmes">Gato-de-botas</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/kung2.png" class="img-sabor">
+                    <p class="p-filmes">Kung Fu panda</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/madagáscar.png" class="img-sabor">
+                    <p class="p-filmes">Madagáscar</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/trolls.png" class="img-sabor">
+                    <p class="p-filmes">Trolls</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/chefin.png" class="img-sabor">
+                    <p class="p-filmes">O poderoso chefinho</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/shrek.png" class="img-sabor">
+                    <p class="p-filmes">Shrek</p>
+                </div>
+            </div>
+            <div class="filmesContainer">
+                <div class="img-filmes">
+                    <img src="img/bakiii.png" class="img-sabor">
+                    <p class="p-filmes">Baki</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/kimetsu.png" class="img-sabor">
+                    <p class="p-filmes">Kimetsu no yaiba</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/dbz.png" class="img-sabor">
+                    <p class="p-filmes">Dragon ball Z</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/onep.png" class="img-sabor">
+                    <p class="p-filmes">One Piece</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/onepunch.png" class="img-sabor">
+                    <p class="p-filmes">One punch</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/bleq.png" class="img-sabor">
+                    <p class="p-filmes">Bleach</p>
+                </div>
+                <div class="img-filmes">
+                    <img src="img/nana.png" class="img-sabor">
+                    <p class="p-filmes">Nanatsu no taizai</p>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            const slider = document.querySelectorAll('.filmesContainer');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+
+
+            slider.forEach(Slid => {
+                Slid.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    Slid.classList.add('active');
+                    startX = e.pageX - Slid.offsetLeft;
+                    scrollLeft = Slid.scrollLeft;
+                });
+                Slid.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    Slid.classList.remove('active');
+                });
+                Slid.addEventListener('mouseup', () => {
+                    isDown = false;
+                    Slid.classList.remove('active');
+                });
+                Slid.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - Slid.offsetLeft;
+                    const walk = (x - startX) * 1;
+                    Slid.scrollLeft = scrollLeft - walk;
+                    console.log(walk);
+                });
+            })
+        </script>
+
+</body>
+
+</html>

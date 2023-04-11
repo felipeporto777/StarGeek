@@ -1,139 +1,300 @@
-body {
-
-    padding: 0;
-
-    margin: 0;
-
-    background-color: #454d6b;
-
+.fundo {
+    background-color: rgb(0, 0, 0);
 }
 
-#login {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    height: 100vh;
-
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-}
-
-.card {
-
-    background-color: rgba(19, 19, 19, 0.3);
-
-    padding: 40px;
-
-    border-radius: 2px;
-
-    width: 280px;
-
-}
-
-.card-header {
-
-    padding-bottom: 50px;
-
-    opacity: 0.8;
-
-    color: #fff;
-
-}
-
-.card-header::after {
-
-    content: "";
-
-    width: 70px;
-
-    height: 1px;
-
-    background-color: #fff;
-
-    display: block;
-
-    margin-top: -17px;
-
-    margin-left: -5px;
-
-}
-
-.card-content label {
-
-    color: #fff;
-
-    font-size: 12px;
-
-    opacity: 0.8;
-
-}
-
-.card-content-area {
-
-    display: flex;
-
-    flex-direction: column;
-
-    padding: 10px 0;
-
-}
-
-.card-content-area input {
-
-    margin-top: 10px;
-
-    padding: 0 5px;
-
-    background-color: transparent;
-
-    border: none;
-
-    border-bottom: 1px solid #e1e1e1;
-
-    outline: none;
-
-    color: #fff;
-
-}
-
-.card-footer {
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-.card-footer .submit {
-
-    width: 100%;
-
-    height: 40px;
-
-    background-color: #a13854;
-
-    border: none;
-
-    color: #e1e1e1;
-
-    margin: 10px 0;
-
-}
-
-.card-footer a {
-
+.divlogin {
     text-align: center;
+    margin: 3%;
+}
 
-    font-size: 12px;
+label {
+    color: aliceblue;
+}
 
-    opacity: 0.8;
+.logocadastro {
+    height: 50px;
+}
 
-    color: #fff;
+.cadastro2 {
+    text-align: center;
+    margin: 10%;
+}
 
+.ffj {
+    color: #ffffff;
+}
+
+.goku {
+    height: 150px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.cabecalho {
+    background-color: rgb(77, 77, 77);
+    display: flex;
+    padding: 20px;
+    box-shadow: 0px 0px 15px black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-cabecalho {
+    width: 80px;
+    margin-right: 30px;
+}
+
+.botao-cabecalho {
     text-decoration: none;
+    color: black;
+    margin: 15px;
+}
 
+.botao-cabecalho:hover {
+    color: rgb(9, 113, 3);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.botao-encontre-uma-loja {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.botao-encontre-uma-loja:hover {
+    color: rgb(9, 113, 3);
+}
+
+.botao-entrar {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    background-color: rgb(77,77,77);
+    border-radius: 20px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.botao-entrar:hover {
+    background-color: rgb(77, 77, 77);
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    transition: 1s;
+}
+.botao-participe-agora {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    background-color: rgb(77,77,77);
+    border-radius: 20px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.botao-participe-agora:hover {
+    background-color: rgb(77, 77, 77);
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    transition: 1s;
+}
+
+.cabecalho2 {
+    display: flex;
+    align-items: center;
+}
+
+.sabores {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-sabor {
+    border-radius: 50px;
+    margin: 10px;
+    padding-left: 8px;
+}
+.img-sabor:hover {
+    border-radius: 12px;
+    margin: 10px;
+    padding-left: 8px;
+    width: 300px;
+    transition: 1s;
+    border: solid rgb(37, 37, 37) 52px;
+}
+
+.img-filmes {
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px black;
+}
+
+.p-filmes {
+    text-align: center;
+    color: white;
+    padding-left: 8px;
+}
+
+.filmesContainer {
+    justify-content: space-around;
+    display: flex;
+    overflow-x: scroll;
+    cursor: grab;
+    margin-left: 2px;
+    padding-left: 656px;
+}
+
+.filmesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(66, 66, 66);
+}
+
+.filmesContainer img {
+    width: 271px;
+    height: 374px;
+}
+
+button.vermelho {
+    background-color: #ff0000;
+}
+
+input {
+    width: 300px;
+    height: 35px;
+    border-radius: 50px;
+
+}
+
+.onep {
+    display: flex;
+}
+
+.index1 {
+    width: 150px;
+}
+
+.index2 {
+    text-align: center;
+}
+
+.imgindex {
+    width: 150px;
+
+}
+
+.index {
+    background-color: #000000;
+}
+
+.texto1 {
+    text-align: left;
+    margin: auto;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.demon {
+    width: 500px;
+    border-radius: 10px;
+    border: solid #ff0000 5px;
+}
+
+.Kimetsu {
+    display: flex;
+    margin: 70px;
+    border: solid rgb(255, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: rgb(182, 182, 182);
+}
+
+.baki {
+    display: flex;
+    margin: 70px;
+    border: solid rgb(255, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: rgb(182, 182, 182);
+}
+
+.bakizin {
+    width: 500px;
+    border-radius: 10px;
+    border: solid #ff0000 5px;
+}
+
+.nanatsu {
+    display: flex;
+    margin: 70px;
+    border: solid rgb(255, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: rgb(182, 182, 182);
+}
+
+.nana {
+    width: 500px;
+    border-radius: 10px;
+    border: solid #ff0000 5px;
+}
+
+.star {
+    display: flex;
+    margin: 70px;
+    border: solid rgb(255, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: rgb(182, 182, 182);
+}
+
+.vermelho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-entrardois {
+    text-decoration: none;
+    color: rgb(141, 141, 141);
+    margin: 10px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.botao-entrardois:hover {
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    margin: 10px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 20px;
+    padding: 10px;
+}
+.ddt{
+    padding-left: 0%;
 }
