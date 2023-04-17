@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="fundo">
+    <div class="geral">
+        <header class="cabecalho">
+            <nav class="menu">
+                <img src="img/Group 9(preto).png" alt="" class="img-cabecalho">
+                <a href="Catalogo.html" class="botao-cabecalho"><b>Filmes</b></a>
+                <a href="Catalogo.html" class="botao-cabecalho"><b>Animes</b></a>
+                <a href="Catalogo.html" class="botao-cabecalho"><b>Séries</b></a>
+                <a href="#" class="botao-cabecalho"><b>Artistas</b></a>
+            </nav>
+            <div class="cabecalho2">
+                <a href="cadastrodemidia.html" class="botao-entrar"><b>Cadastro de mídia</b></a>
+                <a href="index1.html" class="botao-participe-agora"><b>Sair</b></a>
+            </div>
+        </header>
+        <div class="ddt">
+            <div class="subtitulo">
+                <h2> Artistas </h2>
+            </div>
+            <div class="filmesContainer">
+                <div class="img-artista">
+                    <img src="img/arn.png" class="img-sabor">
+                    <p class="p-filmes"> Arnold Schwarzenegger</p>
+                </div>
+                <div class="img-artista">
+                    <img src="img/andre.png" class="img-sabor">
+                    <p class="p-filmes">Andrew garfield</p>
+                </div>
+                <div class="img-artista">
+                    <img src="img/av.png" class="img-sabor">
+                    <p class="p-filmes">Vin Diesel</p>
+                </div>
+                <div class="img-artista">
+                    <img src="img/atb.png" class="img-sabor">
+                    <p class="p-filmes">Tobey Maguire</p>
+                </div>
+                <div class="img-artista">
+                    <img src="img/ald.png" class="img-sabor">
+                    <p class="p-filmes">Leonardo DiCaprio</p>
+                </div>
+                <div class="img-artista">
+                    <img src="img/abd.png" class="img-sabor">
+                    <p class="p-filmes">Brad Pitt</p>
+                </div>
+                <div class="img-artista">
+                    <img src="img/crr.png" class="img-sabor">
+                    <p class="p-filmes">Chris Evans</p>
+                </div>
+            </div>
+
+            <script>
+                const slider = document.querySelectorAll('.filmesContainer');
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+
+
+                slider.forEach(Slid => {
+                    Slid.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        Slid.classList.add('active');
+                        startX = e.pageX - Slid.offsetLeft;
+                        scrollLeft = Slid.scrollLeft;
+                    });
+                    Slid.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        Slid.classList.remove('active');
+                    });
+                    Slid.addEventListener('mouseup', () => {
+                        isDown = false;
+                        Slid.classList.remove('active');
+                    });
+                    Slid.addEventListener('mousemove', (e) => {
+                        if (!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - Slid.offsetLeft;
+                        const walk = (x - startX) * 1;
+                        Slid.scrollLeft = scrollLeft - walk;
+                        console.log(walk);
+                    });
+                })
+            </script>
+
+</body>
+
+</html>
