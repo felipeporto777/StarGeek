@@ -301,6 +301,7 @@ input {
     border: 2px solid rgb(255, 0, 0);
     border-radius: 20px;
     padding: 10px;
+    transition: 750ms;
 }
 .ddt{
     padding-left: 0%;
