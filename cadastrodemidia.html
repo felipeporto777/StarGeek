@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>StarGeek</title>
+    <link rel="stylesheet" href="css.css">
+    <script defer src="cadastrr.js"></script>
 
 </head>
 
-<body class="fundo">
+<body class="fundo" onload="exibirCadastrados()">
+   <br> <div class="divdiv"> <a href="Catalogo.html" class="botao-participe-agoradois"><b>Sair</b></a>
+    </div>
     <div class="divcadastro">
         <img class="logocadastro" src="img/Group 9.png" alt="">
 
@@ -18,15 +21,27 @@
     <div class="cadastro2">
         <h2 class="ffj"> Cadastro de midia</h2>
         <label for="username">nome do titulo</label><br>
-        <input type="text" id="username" name="username"><br><br>
-        <label for="password">Resumo</label><br>
-        <input type="password" id="password" name="password">
+        <input type="text" id="titulo" name="username"><br><br>
+        <label for="text">Sinopse</label><br>
+        <input type="text" id="sinopse" name="password">
         <br>
         <br>
-        <label for="username">Critica</label><br>
-        <input type="text" id="username" name="username"><br><br>
-
-        <a href="Catalogo.html" class="botao-entrardois"><b>Enviar</b></a>
+        <label for="username">Imagem do filme</label><br>
+        
+        <input type="text" id="linkImg" name="username" onkeyup="linkImg()">
+        <br>
+        <br>
+        <br>
+        <img src="" id="imagem" class="Imagemcadastro">
+        <br>
+        <br>
+        <a href="#" class="botao-entrardois" onclick="enviar()"><b>Enviar</b></a>
+        <br>
+        <br>
+        <div class="eee">
+            <h1>Novo cadastro</h1>
+            <div id="cadastrados"></div>
+        </div>
 
     </div>
 
